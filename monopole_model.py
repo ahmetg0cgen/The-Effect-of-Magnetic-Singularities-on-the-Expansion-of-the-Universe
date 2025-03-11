@@ -28,12 +28,12 @@ sol = solve_ivp(friedmann, t_span, [rho_m0, rho_r0, rho_monopole0], t_eval=t_eva
 
 # Graphic drawing
 plt.figure(figsize=(10, 6))
-plt.plot(t_eval, sol.y[0], label="Madde Yoğunluğu", color="b")
-plt.plot(t_eval, sol.y[1], label="Radyasyon Yoğunluğu", color="g", linestyle="--")
-plt.plot(t_eval, sol.y[2], label="Manyetik Tekillik Yoğunluğu", color="r", linestyle=":")
-plt.xlabel("Zaman (Milyar Yıl)")
-plt.ylabel("Yoğunluk")
-plt.title("Manyetik Tekilliklerin Zamanla Evrimi")
+plt.plot(t_eval, sol.y[0], label="Matter Density", color="b")
+plt.plot(t_eval, sol.y[1], label="Radiation Intensity", color="g", linestyle="--")
+plt.plot(t_eval, sol.y[2], label="Magnetic Singularity Density", color="r", linestyle=":")
+plt.xlabel("Time (Billion Years)")
+plt.ylabel("Intensity")
+plt.title("Evolution of Magnetic Singularities with Time")
 plt.legend()
 plt.grid(True)
 plt.show()
